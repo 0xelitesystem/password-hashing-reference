@@ -8,15 +8,19 @@ Store passwords as salted hashes from a slow, purpose-built password hashing fun
 
 ## What is inside
 
-- `01-what-not-to-do.md` plaintext, encryption, and fast hashes, and why each fails.
-- `02-salting.md` what a salt is, why it is per-user, and where it lives.
-- `03-algorithms-and-work-factors.md` bcrypt, scrypt, argon2, and tuning cost.
-- `04-pepper-and-extras.md` pepper, constant-time compare, and length limits.
-- `05-migration.md` upgrading a live user table safely.
+- [01-what-not-to-do.md](01-what-not-to-do.md) plaintext, encryption, and fast hashes, and why each fails.
+- [02-salting.md](02-salting.md) what a salt is, why it is per-user, and where it lives.
+- [03-algorithms-and-work-factors.md](03-algorithms-and-work-factors.md) bcrypt, scrypt, argon2, and tuning cost.
+- [04-pepper-and-extras.md](04-pepper-and-extras.md) pepper, constant-time compare, and length limits.
+- [05-migration.md](05-migration.md) upgrading a live user table safely.
 
 ## The stance
 
 This is a solved problem with a short list of correct answers. Do not invent your own scheme, do not reach for SHA-256 because it is familiar, and do not encrypt. Pick argon2id (or bcrypt if that is what your platform gives you), salt every password, tune the cost, and move on.
+
+## More
+
+Part of a catalog of single-file browser tools and plain-language references, all MIT licensed and dependency-free: [0xelitesystem.github.io](https://0xelitesystem.github.io/). Built by [elitesystem.ai](https://elitesystem.ai).
 
 ## License
 
